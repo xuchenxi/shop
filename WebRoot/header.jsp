@@ -10,7 +10,8 @@
 		<a href="https://ganquanzhong.top" target="_blank"> <img src="img/logo.png" width="100px" height="60px"/> </a>
 	</div>
 	<div class="col-md-5">
-	    <span v-bind:title="loginMsg" style="color:#f28205;text-align:center;font-size:40px;font-family:'楷体';font-weight: bolder;">刘哲商城LIUZHE SHOP</span>
+		<span v-bind:title="loginMsg"
+			  style="color:#f28205;text-align:center;font-size:40px;font-family:'楷体';font-weight: bolder;">电脑配件商城PC PARTS SHOP</span>
 	</div>
 	<div class="col-md-3" style="padding-top:20px">
 		<ol class="list-inline">

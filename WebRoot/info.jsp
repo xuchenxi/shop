@@ -23,7 +23,8 @@
 
 			<div class="container-fluid" style="width: 100%; background: url('img/regist_bg.jpg');">
 				<div class="main_con">
-					<h2 style="color:#f28205;text-align:center;font-size:40px;font-family:'楷体';font-weight: bolder;">LIUZHE SHOP</h2>
+					<h2 style="color:#f28205;text-align:center;font-size:40px;font-family:'楷体';font-weight: bolder;">PC
+						PARTS SHOP</h2>
 					<hr/>
 					<div>
 						<p>
