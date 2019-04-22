@@ -27,7 +27,7 @@ public class AdminuserController {
 
     /**
      * 后台登录
-     *
+     * xuchenxi
      * @param adminuser
      * @param session
      * @return
