@@ -1,0 +1,9 @@
+
+vsquid:S1488$"_Immediately return this expression instead of assigning it to the temporary variable "restult".(Ç´¢…
+gsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(‘‡½şÿÿÿÿÿ
+squid:S14885"\Immediately return this expression instead of assigning it to the temporary variable "list".(Â´ºüÿÿÿÿ8‘²î³™-
+tsquid:S2159\"VRemove this call to "equals"; comparisons between unrelated types always return false.(¼Ñ8¹µ™-
+Bsquid:S1168C"+Return an empty collection instead of null.(¥¹ï
+Usquid:S1155P">Use isEmpty() to check whether the collection is empty or not.(àšÔ»
+ƒsquid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "userList".(ÃÑĞûÿÿÿÿ8‘²î³™-
+zsquid:S1488b"\Immediately return this expression instead of assigning it to the temporary variable "list".(Şü±–8‘²î³™-

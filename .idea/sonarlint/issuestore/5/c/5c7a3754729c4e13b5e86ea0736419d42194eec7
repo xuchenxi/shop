@@ -1,0 +1,9 @@
+
+ssquid:S1488("\Immediately return this expression instead of assigning it to the temporary variable "list".(ªçÔ“
+wsquid:S1488b"`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(—€ïÃ
+~squid:S1488O"gImmediately return this expression instead of assigning it to the temporary variable "insertSelective".(ÖÍŠá
+squid:S1488U"jImmediately return this expression instead of assigning it to the temporary variable "deleteByPrimaryKey".(Ã“½ö
+squid:S1488F"jImmediately return this expression instead of assigning it to the temporary variable "updateByPrimaryKey".(ý¬Æ 
+Usquid:S1155">Use isEmpty() to check whether the collection is empty or not.(œêËè
+psquid:S2293b"YReplace the type specification in this constructor call with the diamond operator ("<>").(—€ïÃ
+ssquid:S14889"\Immediately return this expression instead of assigning it to the temporary variable "list".(ªçÔ“

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liuzhe.shop.mapper.ShopcartMapper" >
+  <resultMap id="BaseResultMap" type="com.liuzhe.shop.pojo.Shopcart" >
+    <id column="sid" property="sid" jdbcType="INTEGER" />
+    <result column="pid" property="pid" jdbcType="INTEGER" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="subtotal" property="subtotal" jdbcType="DOUBLE" />
+    <result column="specid" property="specid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    sid, pid, count, uid, subtotal, specid
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.liuzhe.shop.pojo.ShopcartExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from shopcart
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shopcart
+    where sid = #{sid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shopcart
+    where sid = #{sid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.liuzhe.shop.pojo.ShopcartExample" >
+    delete from shopcart
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.liuzhe.shop.pojo.Shopcart" >
+    insert into shopcart (sid, pid, count, 
+      uid, subtotal, specid
+      )
+    values (#{sid,jdbcType=INTEGER}, #{pid,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}, 
+      #{uid,jdbcType=INTEGER}, #{subtotal,jdbcType=DOUBLE}, #{specid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.liuzhe.shop.pojo.Shopcart" >
+    insert into shopcart
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        sid,
+      </if>
+      <if test="pid != null" >
+        pid,
+      </if>
+      <if test="count != null" >
+        count,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="subtotal != null" >
+        subtotal,
+      </if>
+      <if test="specid != null" >
+        specid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="count != null" >
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="subtotal != null" >
+        #{subtotal,jdbcType=DOUBLE},
+      </if>
+      <if test="specid != null" >
+        #{specid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.liuzhe.shop.pojo.ShopcartExample" resultType="java.lang.Integer" >
+    select count(*) from shopcart
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update shopcart
+    <set >
+      <if test="record.sid != null" >
+        sid = #{record.sid,jdbcType=INTEGER},
+      </if>
+      <if test="record.pid != null" >
+        pid = #{record.pid,jdbcType=INTEGER},
+      </if>
+      <if test="record.count != null" >
+        count = #{record.count,jdbcType=INTEGER},
+      </if>
+      <if test="record.uid != null" >
+        uid = #{record.uid,jdbcType=INTEGER},
+      </if>
+      <if test="record.subtotal != null" >
+        subtotal = #{record.subtotal,jdbcType=DOUBLE},
+      </if>
+      <if test="record.specid != null" >
+        specid = #{record.specid,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update shopcart
+    set sid = #{record.sid,jdbcType=INTEGER},
+      pid = #{record.pid,jdbcType=INTEGER},
+      count = #{record.count,jdbcType=INTEGER},
+      uid = #{record.uid,jdbcType=INTEGER},
+      subtotal = #{record.subtotal,jdbcType=DOUBLE},
+      specid = #{record.specid,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.liuzhe.shop.pojo.Shopcart" >
+    update shopcart
+    <set >
+      <if test="pid != null" >
+        pid = #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="count != null" >
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="subtotal != null" >
+        subtotal = #{subtotal,jdbcType=DOUBLE},
+      </if>
+      <if test="specid != null" >
+        specid = #{specid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where sid = #{sid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.liuzhe.shop.pojo.Shopcart" >
+    update shopcart
+    set pid = #{pid,jdbcType=INTEGER},
+      count = #{count,jdbcType=INTEGER},
+      uid = #{uid,jdbcType=INTEGER},
+      subtotal = #{subtotal,jdbcType=DOUBLE},
+      specid = #{specid,jdbcType=INTEGER}
+    where sid = #{sid,jdbcType=INTEGER}
+  </update>
+  
+  <!-- 自定义方法 -->
+  <!-- ShopcartPojo -->
+  <resultMap id="shopcartPojoMap" type="com.liuzhe.shop.pojo.ShopcartPojo" >
+    <id column="sid" property="sid" jdbcType="INTEGER" />
+    <result column="pid" property="pid" jdbcType="INTEGER" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="subtotal" property="subtotal" jdbcType="DOUBLE" />
+    <result column="pname" property="pname" jdbcType="VARCHAR" />
+    <result column="new_price" property="newPrice" jdbcType="DOUBLE" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="psize" property="psize" jdbcType="VARCHAR" />
+    <result column="pcolor" property="pcolor" jdbcType="VARCHAR" />
+  </resultMap>
+  <!-- 
+  <select id="selectShopcartPojoByUid" parameterType="Integer" resultMap="shopcartPojoMap" >
+    select s.*, p.pname,p.new_price,p.image from shopcart s left join product p on s.pid=p.pid where s.uid=#{uid,jdbcType=INTEGER}
+  </select> 
+  -->
+  <select id="selectShopcartPojoByUid" parameterType="Integer" resultMap="shopcartPojoMap" >
+   select s.*, p.pname,p.new_price,p.image,i.psize,i.pcolor from shopcart s 
+		left join product p on s.pid=p.pid 
+			left join inventory i on s.specid=i.id 
+				where s.uid=#{uid,jdbcType=INTEGER} ORDER BY sid DESC
+  </select>
+  
+</mapper>

@@ -1,0 +1,15 @@
+
+esquid:S1192$"IDefine a constant instead of duplicating this literal "pid desc" 6 times.(„¼Ÿˆøÿÿÿÿ
+psquid:S2293("YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿ€ì¼
+psquid:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿ€ì¼
+psquid:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿ€ì¼
+psquid:S2293U"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿ€ì¼
+psquid:S2293e"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿ€ì¼
+psquid:S2293v"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿ€ì¼
+zsquid:S1488"^Immediately return this expression instead of assigning it to the temporary variable "result".(ìÊ¦ úÿÿÿÿ
+wsquid:S1488("`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(ÿ€ì¼
+wsquid:S14888"`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(ÿ€ì¼
+wsquid:S1488G"`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(ÿ€ì¼
+wsquid:S1488U"`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(ÿ€ì¼
+wsquid:S1488e"`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(ÿ€ì¼
+wsquid:S1488v"`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(ÿ€ì¼

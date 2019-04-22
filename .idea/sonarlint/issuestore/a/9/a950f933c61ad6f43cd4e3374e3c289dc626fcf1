@@ -1,0 +1,7 @@
+
+_squid:S1192D"HDefine a constant instead of duplicating this literal "result" 16 times.(¥ë·ç
+vsquid:S2293µ"YReplace the type specification in this constructor call with the diamond operator ("<>").(£ðŽáûÿÿÿÿ
+]squid:S1192D"FDefine a constant instead of duplicating this literal "error" 6 times.(¥ë·ç
+vsquid:S2293ž"YReplace the type specification in this constructor call with the diamond operator ("<>").(£ðŽáûÿÿÿÿ
+vsquid:S2293ç"YReplace the type specification in this constructor call with the diamond operator ("<>").(£ðŽáûÿÿÿÿ
+lsquid:S2441¡"MMake "List" and its parameters serializable or don't store it in the session.(´’«ÿ8ª‚€²™-

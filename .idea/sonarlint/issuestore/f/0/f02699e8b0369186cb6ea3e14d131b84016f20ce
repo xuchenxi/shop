@@ -1,0 +1,6 @@
+
+Usquid:S1155,">Use isEmpty() to check whether the collection is empty or not.(¨¥Óù
+|squid:S1488U"^Immediately return this expression instead of assigning it to the temporary variable "result".(ÃÚ»8°úé³™-
+}squid:S1488H"`Immediately return this expression instead of assigning it to the temporary variable "pageInfo".(é¨ú	8°úé³™-
+vsquid:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(é¨ú	8°úé³™-
+squid:S1488"eImmediately return this expression instead of assigning it to the temporary variable "inventoryList".(éâÍıÿÿÿÿ

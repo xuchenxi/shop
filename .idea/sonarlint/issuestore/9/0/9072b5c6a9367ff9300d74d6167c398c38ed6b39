@@ -1,0 +1,15 @@
+
+`squid:S1192ú"HDefine a constant instead of duplicating this literal "amount" 10 times.(­Õ¦
+_squid:S1192ü"GDefine a constant instead of duplicating this literal "state" 10 times.(“ÉÕ
+dsquid:S1192î"GDefine a constant instead of duplicating this literal "psize" 12 times.(æ†¹ûÿÿÿÿ
+`squid:S1192¶"HDefine a constant instead of duplicating this literal "remark" 12 times.(íêÑ
+`squid:S1192´"HDefine a constant instead of duplicating this literal "pcolor" 12 times.(¨âí
+osquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
+psquid:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+wsquid:S14888"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì
+csquid:S00112X"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
+csquid:S00112_"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
+]squid:S00112f"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+Tsquid:S11551">Use isEmpty() to check whether the collection is empty or not.(Á½¼s
+Zsquid:S1155K">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ
