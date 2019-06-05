@@ -146,6 +146,30 @@ var request = {
 		ofckEditor.ReplaceTextarea();
 
 	});
+	function modify(){
+		//上传文件时，不能使用表单序列化的方式
+		var params=new FormData($("#uploadForm")[0]);
+		//将再现编辑器的内容取出来，放到FormData中去
+		var oEditor=FCKeditorAPI.GetInstance("pdesc");
+		var fcontent=oEditor.GetXHTML();
+		params.set("pdesc",fcontent);
+		//发送ajax请求
+		$.ajax({
+			url:"editProduct",
+			type:"post",
+			data:params,
+			contentType:false,
+			processData:false,
+			success:function(data){
+				if(data==1){
+    				alert("商品添加成功!");
+					window.location.reload(true);
+				}else{
+					alert("商品添加失败!");
+    			}
+			}
+		});
+	}
 </script>
 </html>
 

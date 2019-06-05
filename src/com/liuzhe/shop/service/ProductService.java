@@ -19,6 +19,9 @@ public interface ProductService {
 
     //删除商品
     public int deleteProduct(Integer pid);
+    
+    //编辑商品
+    public int updateProduct(Integer pid);
 
     //通过id查询product
     public Product getProductByPid(Integer pid);
@@ -40,4 +43,5 @@ public interface ProductService {
 
     //查询商品详情
     ProductPojo getProductPojoByPid(Integer pid);
+
 }

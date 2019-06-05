@@ -62,4 +62,14 @@ public class ProductController {
         return this.productService.getProductByPid(pid);
     }
 
+    @RequestMapping("/admin/editProduct")
+    @ResponseBody
+    public String editProduct(final Integer pid) {
+    	final int result = this.productService.updateProduct(pid);
+    	if (result != 0) {
+            return "1";
+        } else {
+            return "0";
+        }
+    }
 }
