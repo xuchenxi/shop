@@ -163,10 +163,10 @@ var request = {
 			processData:false,
 			success:function(data){
 				if(data==1){
-    				alert("商品添加成功!");
+					alert("商品修改成功!");
 					window.location.reload(true);
 				}else{
-					alert("商品添加失败!");
+					alert("商品修改失败!");
     			}
 			}
 		});
