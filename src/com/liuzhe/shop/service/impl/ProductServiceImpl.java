@@ -131,6 +131,20 @@ public class ProductServiceImpl implements ProductService {
         return this.productMapper.selectProductPojoByPid(pid);
     }
 
+    @Override
+    public List<Product> selectProductByTerm(final Product product) {
+        final ProductExample productExample = new ProductExample();
+        final ProductExample.Criteria productCriteria = productExample.createCriteria();
+        if (product.getCid() != null && !"".equals(product.getCid())) {
+            productCriteria.andCidEqualTo(product.getCid());
+        }
+        if (product.getPname() != null && !"".equals(product.getPname())) {
+            productCriteria.andPnameLike("%" + product.getPname() + "%");
+        }
+        final List<Product> list = this.productMapper.selectByExample(productExample);
+        return list;
+    }
+
     //封装 处理图片路径的问题 和商品名称的截取
     private void changeProductList(final List<Product> list) {
         //处理图片路径的问题

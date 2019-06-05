@@ -1,7 +1,7 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8" %>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+final String path = request.getContextPath();
+final String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						商品列表
 					</h1>
 					<h4 style="color:#0088cc">请输入查询条件：</h4>
-					<form class="form-horizontal">
+					<form class="form-horizontal" method="post" action="selectProductByTerm">
 						<div class="control-group" style="text-align:center;">
 						<fieldset>							
 							<div >

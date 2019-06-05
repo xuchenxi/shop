@@ -4,6 +4,8 @@ import com.github.pagehelper.PageInfo;
 import com.liuzhe.shop.pojo.Product;
 import com.liuzhe.shop.pojo.ProductPojo;
 
+import java.util.List;
+
 /**
  * @author xuchenxi
  * @ClassName: ProductService
@@ -43,5 +45,8 @@ public interface ProductService {
 
     //查询商品详情
     ProductPojo getProductPojoByPid(Integer pid);
+
+    // 条件查询
+    List<Product> selectProductByTerm(Product product);
 
 }

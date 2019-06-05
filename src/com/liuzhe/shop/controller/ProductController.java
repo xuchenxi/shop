@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Controller
@@ -77,5 +79,19 @@ public class ProductController {
         } else {
             return "0";
         }
+    }
+
+    // 有条件的查询user
+    @RequestMapping("/admin/selectProductByTerm")
+    public ModelAndView selectProductByTerm(final Product product) {
+        final List<Product> productList = this.productService.selectProductByTerm(product);
+        final ModelAndView modelAndView = new ModelAndView();
+        if (productList == null || productList.isEmpty()) {
+            modelAndView.addObject("msg", "没有查询结果,请更换查询条件!");
+        } else {
+            modelAndView.addObject("productList", productList);
+        }
+        modelAndView.setViewName("product_list");
+        return modelAndView;
     }
 }
