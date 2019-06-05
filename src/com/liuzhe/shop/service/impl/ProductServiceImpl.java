@@ -158,9 +158,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
 	@Override
-	public int updateProduct(Integer pid) {
-		Product product = productMapper.selectByPrimaryKey(pid);
-		final int result = productMapper.updateByPrimaryKey(product);
+    public int updateProduct(final Product product) {
+		final int result = this.productMapper.updateByPrimaryKey(product);
 		return result;
 	}
     

@@ -1,7 +1,7 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8" %>
 <%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+	final String path = request.getContextPath();
+	final String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
 
@@ -153,6 +153,7 @@ var request = {
 		var oEditor=FCKeditorAPI.GetInstance("pdesc");
 		var fcontent=oEditor.GetXHTML();
 		params.set("pdesc",fcontent);
+		params.set("pid", arg);
 		//发送ajax请求
 		$.ajax({
 			url:"editProduct",

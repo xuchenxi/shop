@@ -64,9 +64,15 @@ public class ProductController {
 
     @RequestMapping("/admin/editProduct")
     @ResponseBody
-    public String editProduct(final Integer pid) {
-    	final int result = this.productService.updateProduct(pid);
-    	if (result != 0) {
+    public String editProduct(final Product product, @RequestParam("imageFile") final MultipartFile[] files) {
+        //从客户端接收文件的时候，文件单独处理
+        CommonUtils.uploadFiles(product, files);
+        //设置商品的其他属性
+        product.setPdate(new Date());
+        product.setVolume(0);
+        product.setState(0);//初始为未删除的
+        final int result = this.productService.updateProduct(product);
+        if (result != 0) {
             return "1";
         } else {
             return "0";

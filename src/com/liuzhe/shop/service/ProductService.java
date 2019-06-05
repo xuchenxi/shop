@@ -21,7 +21,7 @@ public interface ProductService {
     public int deleteProduct(Integer pid);
     
     //编辑商品
-    public int updateProduct(Integer pid);
+    public int updateProduct(Product product);
 
     //通过id查询product
     public Product getProductByPid(Integer pid);
