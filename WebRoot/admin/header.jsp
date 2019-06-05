@@ -16,7 +16,7 @@
 				</form>
 				<ul class="nav pull-right">
 					<li><a href="#">${sessionScope.adminuser.username }</a></li>
-					<li><a href="exit">退出登录</a></li>
+					<li><a href="login">退出登录</a></li>
 				</ul>
 			</div>
 		</div>

@@ -58,7 +58,7 @@ public class ProductController {
 
     @RequestMapping("/admin/getProductByPid")
     @ResponseBody
-    public Product getProductByPid(final int pid) {
+    public Product getProductByPid(final Integer pid) {
         return this.productService.getProductByPid(pid);
     }
 

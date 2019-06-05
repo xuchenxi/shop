@@ -120,7 +120,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									+"<a href='javascript:stock("+n.pid+")'>查看库存</a>&nbsp;&nbsp;"
 									+"<a href='javascript:addInventory("+n.pid+")'>添加规格</a>&nbsp;&nbsp;"
 									+"<a href='javascript:modify("+n.pid+")'>修改</a>&nbsp;&nbsp;"
-									+"<a cdel("+n.pid+")'>删除</a>"
+									+"<a href='javascript:del("+n.pid+")'>删除</a>"
 								+"</td>"
 						);
 						//添加一行tr到tbody中
@@ -159,6 +159,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		//添加规格
 		function addInventory(pid){		
 			window.location.href="product_inventory?pid="+pid;
+		}
+		function modify(pid){		
+			window.location.href="edit_product?pid="+pid;
 		}
 		
 		//删除

@@ -28,7 +28,7 @@ public class CommonUtils {
      * 本机地址  E:\\ShopFile\\upload\\
      */
 
-    public static String path = "E:\\ShopFile\\upload\\";//根据自己的路径设定
+    public static String path = "D:\\upload\\";//根据自己的路径设定
 
     //文件上传  多个文件上传
     public static void uploadFiles(final Product product, final MultipartFile[] files) {

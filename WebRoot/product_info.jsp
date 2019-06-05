@@ -202,16 +202,7 @@
 				</div>
 					
 				<div class="seller-phone">
-						<span class="pop im">
-			            <a href="http://ganquanzhong.top/Web/LiuZhe-qq.html" target="_blank"  data-name="联系卖家"><img src="img/images/phon.png"/>联系卖家</a>
-			          </span>
-								<span class="pop in">
-			            <a href="http://ganquanzhong.top/Web/LiuZhe-qq.html" data-name="咨询卖家" target="_blank"><img src="img/images/qq.png"/>咨询卖家</a>
-			          </span>
-			        
-					   <span class="pop in">
-				            <a href="localhost:8080/shop" data-name="进店逛逛"><img src="img/images/shop-line.png"/>进店逛逛</a>
-				       </span>	
+						
          
 				</div>
 				
@@ -221,9 +212,7 @@
 					</a>
 				</div>
 				
-				<div class="suport-icons" >					
-					<img src="img/images/weixinGZH.png" />
-				</div>
+				
 				
 			</div>
 			<!--right 店铺信息 start-->
@@ -241,15 +230,7 @@
 						<li class="act_active">
 							<a href="#">商品介绍</a>
 						</li>
-						<li>
-							<a href="#">商品参数</a>
-						</li>
-						<li>
-							<a href="#">商品评价</a>
-						</li>
-						<li>
-							<a href="#">售后保障</a>
-						</li>
+				
 					</ul>
 					
 					<ul class="act_title_right">
